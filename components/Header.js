@@ -6,12 +6,10 @@ import AuthContext from "../context/AuthContext";
 import styles from "../styles/Header.module.css";
 
 export default () => {
-
   const router = useRouter();
   const isHome = router.pathname === "/";
 
-  const authContext = useContext(AuthContext)
-  console.log({ authContext })
+  const { user } = useContext(AuthContext);
 
   const goBack = (event) => {
     event.preventDefault();
